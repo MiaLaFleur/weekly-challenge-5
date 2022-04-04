@@ -8,8 +8,10 @@ $(".saveBtn").on("click", function() {
     localStorage.setItem(time, desc);
 });
 
-var LoadEvents = function() {
-    localStorage.getItem(time, desc);
+var LoadEvents = function(time, desc) {
+    var savedEvents = JSON.parse(localStorage.getItem("time"));
+    console.log(savedEvents);
+
 }
 
 LoadEvents();
