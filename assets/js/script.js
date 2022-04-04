@@ -1,4 +1,4 @@
-var timeArr = ["9", "10", "11", "12", "1", "2", "3", "4","5"];
+var timeArr = ["9", "10", "11", "12", "13", "14", "15", "16","17"];
 
 $(".saveBtn").on("click", function() {
 
@@ -13,17 +13,17 @@ var LoadEvents = function() {
     $("#10").val(localStorage.getItem("10"));
     $("#11").val(localStorage.getItem("11"));
     $("#12").val(localStorage.getItem("12"));
-    $("#1").val(localStorage.getItem("1"));
-    $("#2").val(localStorage.getItem("2"));
-    $("#3").val(localStorage.getItem("3"));
-    $("#4").val(localStorage.getItem("4"));
-    $("#5").val(localStorage.getItem("5"));
+    $("#13").val(localStorage.getItem("13"));
+    $("#14").val(localStorage.getItem("14"));
+    $("#15").val(localStorage.getItem("15"));
+    $("#16").val(localStorage.getItem("16"));
+    $("#17").val(localStorage.getItem("17"));
 }
 
 LoadEvents();
 
 var checkEventTime = function() {
-    var currentHour = moment().hours();
+    var currentHour = moment().format("H");
     
     for (var i = 0; i < timeArr.length; i++) {
         var blockEl = $("#" + timeArr[i]);
