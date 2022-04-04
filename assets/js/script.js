@@ -1,4 +1,4 @@
-var events = [];
+var timeArr = ["9", "10", "11", "12", "1", "2", "3", "4","5"];
 
 $(".saveBtn").on("click", function() {
 
@@ -23,12 +23,23 @@ var LoadEvents = function() {
 LoadEvents();
 
 var checkEventTime = function() {
-    var currentTime = moment().hours();
-    console.log(currentTime);
+    var currentHour = moment().hours();
+    
+    for (var i = 0; i < timeArr.length; i++) {
+        var blockEl = $("#" + timeArr[i]);
 
-    if () {
-
+        if (currentHour < parseInt(timeArr[i])) {
+            blockEl.addClass("future");
+        }
+        else if (currentHour > parseInt(timeArr[i])) {
+            blockEl.addClass("past");
+        }
+        else if (currentHour === parseInt(timeArr[i])) {
+            blockEl.addClass("present");
+        }
+            
     };
-}
+    console.log(currentHour);
+};
 
 checkEventTime();
