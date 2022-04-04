@@ -23,5 +23,12 @@ var LoadEvents = function() {
 LoadEvents();
 
 var checkEventTime = function() {
-    
+    var currentTime = moment().hours();
+    console.log(currentTime);
+
+    if () {
+
+    };
 }
+
+checkEventTime();
